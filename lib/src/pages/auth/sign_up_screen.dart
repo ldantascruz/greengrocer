@@ -77,7 +77,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         CustomTextField(
                           icon: Icons.phone,
-                          label: 'Celuar',
+                          label: 'Celular',
                           inputFormatters: [phoneFormater],
                           typeKeyboard: TextInputType.number,
                         ),
