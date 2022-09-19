@@ -73,7 +73,7 @@ List<String> categories = [
   'Grãos',
   'Verduras',
   'Temperos',
-  'Careais',
+  'Cereais',
 ];
 
 // Lista de Itens do carrinho
@@ -107,10 +107,10 @@ List<OrderModel> orders = [
   OrderModel(
     copyAndPaste: 'q1w2e3r4t5y6',
     createdDateTime: DateTime.parse(
-      '2022-06-08 10:00:10.458',
+      '2022-09-19 15:40:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2022-06-08 11:00:10.458',
+      '2022-09-19 17:55:10.458',
     ),
     id: 'asd6a54da6s2d1',
     status: 'pending_payment',
@@ -126,23 +126,26 @@ List<OrderModel> orders = [
       ),
     ],
   ),
-
-  // Pedido 02
+  //Pedido 02
   OrderModel(
-    copyAndPaste: 'q1w2e3r4t5y6',
+    copyAndPaste: 'j536r7h8t5y6',
     createdDateTime: DateTime.parse(
-      '2022-06-08 10:00:10.458',
+      '2022-09-19 15:40:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2022-06-08 11:00:10.458',
+      '2022-09-19 16:55:10.458',
     ),
-    id: 'a65s4d6a2s1d6a5s',
+    id: 'asd6a54da6s2d1',
     status: 'delivered',
-    total: 11.5,
+    total: 11.0,
     items: [
       CartItemModel(
-        item: guava,
-        quantity: 1,
+        item: apple,
+        quantity: 2,
+      ),
+      CartItemModel(
+        item: mango,
+        quantity: 2,
       ),
     ],
   ),
