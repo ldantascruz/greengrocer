@@ -1,12 +1,12 @@
 import 'package:add_to_cart_animation/add_to_cart_animation.dart';
 import 'package:add_to_cart_animation/add_to_cart_icon.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/pages/common_widgets/app_name_widget.dart';
 import 'package:greengrocer/src/pages/common_widgets/custom_shimmer.dart';
 import 'package:greengrocer/src/pages/home/components/category_tile.dart';
-import 'package:greengrocer/src/config/app_data.dart' as appData;
+import 'package:greengrocer/src/config/app_data.dart' as app_data;
 import 'package:greengrocer/src/pages/home/components/item_tile.dart';
 import 'package:greengrocer/src/services/utils_services.dart';
 
@@ -60,7 +60,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
             child: GestureDetector(
               onTap: () {},
-              child: Badge(
+              child: badges.Badge(
                 badgeColor: CustomColors.customContrastColor,
                 badgeContent: const Text(
                   '2',
@@ -135,16 +135,16 @@ class _HomeTabState extends State<HomeTab> {
                         return CategoryTile(
                           onPressed: () {
                             setState(() {
-                              selectCategory = appData.categories[index];
+                              selectCategory = app_data.categories[index];
                             });
                           },
-                          category: appData.categories[index],
+                          category: app_data.categories[index],
                           isSelected:
-                              appData.categories[index] == selectCategory,
+                              app_data.categories[index] == selectCategory,
                         );
                       },
                       separatorBuilder: (_, index) => const SizedBox(width: 10),
-                      itemCount: appData.categories.length,
+                      itemCount: app_data.categories.length,
                     )
                   : ListView(
                       scrollDirection: Axis.horizontal,
@@ -175,10 +175,10 @@ class _HomeTabState extends State<HomeTab> {
                         crossAxisSpacing: 10,
                         childAspectRatio: 9 / 11.5,
                       ),
-                      itemCount: appData.items.length,
+                      itemCount: app_data.items.length,
                       itemBuilder: (_, index) {
                         return ItemTile(
-                          item: appData.items[index],
+                          item: app_data.items[index],
                           cartAnimationMethod: itemSelectedCartAnimations,
                         );
                       },
